@@ -1,0 +1,14 @@
+HAL YANG PERLU DI COPY PASTE
+
+1. Semua Folder (Mulai dari Folder App Hingga Folder Test)
+2. package.json
+3. vite.config.js
+
+
+Setelah Mengcopy Paste Hal Yang di perlukan, Lakukanlah langkah-langkah dibawah ini
+
+1. jalankan perintah composer require laravel/ui --dev
+2. jalankan perintah npm install
+3. buka file .env APP_NAME dan DB_DATABASE sesuai nama folder misalkan nama foldernya tokoonline ubah APP_NAME dan DB_DATABASE menjadi tokoonline 
+4. jalankan perintah php artisan migrate
+5. jalankan perintah npm run dev
