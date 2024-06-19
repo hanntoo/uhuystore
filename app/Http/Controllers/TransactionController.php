@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Models\Product;
 use App\Models\Models\Transaction;
 use App\Models\Models\TransactionDetail;
 
@@ -12,6 +13,7 @@ class TransactionController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         $items = Transaction::all();
@@ -42,6 +44,7 @@ class TransactionController extends Controller
     public function show(string $id)
     {
         $item = Transaction::with('details.product')->findOrFail($id);
+
         return view('pages.transactions.show')->with([
             'item' => $item
         ]);
